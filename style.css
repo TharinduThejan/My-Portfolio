@@ -19,6 +19,7 @@ html {
     --main-color:#5982f4;
     --font-family: 'Nunito', sans-serif;
 }
+
 html{
     font-size: 62.5%;
     overflow-x:hidden;
@@ -47,13 +48,22 @@ section{
     /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
 }
 .logo{
+    margin-left: 39px;
+    margin-bottom: 1px;
+    margin-top: 10px;
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-color);
     cursor: default;
 }
+.navbar{
+    margin-top: 8px;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
 .navbar a {
-   font-size: 1.5rem;
+   font-size: 2rem;
    color: var(--text-color);
    font-weight: 700;
    margin-left: 4rem;
@@ -393,65 +403,91 @@ span{
     color: var(--snd-bg-color);
 }
 
-
-
 /* Contact Section Styles */
-.contact h2{
-    padding-top: 12rem;
-    margin-bottom: 3rem;
-    /* max-width: 50%; */
-    /* text-align: left;
-    line-height: 1.2; */
-    /* margin-left: 5rem; */
-}
-.contact form{
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-.contact form .input-box{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.contact {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  text-align: center;
 }
 
-.contact form .input-box input,
-.contact form textarea{
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
-    background: var(--snd-bg-color);
-    border-radius: .8rem;
-    margin: .7rem 0;
-}
-.contact form .input-box input{
-    width: 49%;
-}
-.contact form textarea{
-    resize: none;
+.contact h2 {
+  margin-bottom: 2.5rem;
 }
 
-/* .contact form .btn{
-    margin-top: 2rem;
-    cursor: pointer;
-} */
-.contact form .btn {
-    background: var(--main-color);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.6rem;
-    border-radius: .8rem;
-    transition: 0.3s ease;
-  }
-  
-  .contact form .btn:hover {
-    background: var(--hover-color);
-    transform: scale(1.05);
-  }
-  
+/* Contact Info Styles */
+.contact-info {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 2rem;
+  background-color: var(--snd-bg-color);
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  background-color: var(--bg-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0.8rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: var(--main-color);
+  flex-shrink: 0;
+}
+
+.contact-item a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+.contact-cta {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-3px);
+}
+
+.contact-illustration {
+  margin: 2rem auto 3rem;
+  display: flex;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+
   /* footer Style */
   footer {
    display: flex;
